@@ -1,0 +1,25 @@
+﻿@model MemberForgetPasswordViewModel
+@{
+    ViewData["Title"] = "Forgot";
+}
+
+<form asp-action="forget" method="post">
+    <div class="login-form">
+        <h4 class="login-title">Forget password</h4>
+        <p><span class="font-weight-bold">I am a returning customer</span></p>
+        <div class="row">
+            <div class="col-md-12 col-12 mb--15">
+                <label asp-for="Email">Enter your email address here...</label>
+                <input asp-for="Email" class="mb-0 form-control" id="email1" placeholder="Enter you user email...">
+                <span asp-validation-for="Email"></span>
+            </div>
+           
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-outlined">Login</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+

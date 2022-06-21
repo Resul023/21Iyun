@@ -1,0 +1,43 @@
+﻿@model AdminRegisterViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <form asp-action="create" method="post">
+
+                <div class="form-group">
+                    <label asp-for="UserName">User name</label>
+                    <input asp-for="UserName" name="UserName" type="text" class="form-control">
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FullName">Full name</label>
+                    <input asp-for="FullName" name="FullName" class="form-control">
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" name="Password" class="form-control">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword">Confirm Password</label>
+                    <input asp-for="ConfirmPassword" name="ConfirmPassword" class="form-control">
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
